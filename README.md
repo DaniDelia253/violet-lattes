@@ -45,11 +45,11 @@ The site will have a login feature that authenticates users using JWT. Authentic
 
 ## MVP (Minimum Viable Product)
 
-The site will have a home page with info about the artist, Kirsten. The "Buy my Works" section will take the user to a catalogue of available works. Each work will have a details page that provides a description of the work, as well as the prices and the option to add it to the cart. The "Commissions" section will have a form to allow users to reach out to Kirsten about a custon work. There will also be a "Contact Me" section with contact and social media information about the Kirsten. 
+The site will have a home page with info about the artist, Kirsten. The "Buy my Works" section will take the user to a catalogue of available works. Each work will have a details page that provides a description of the work, as well as the prices and the option to add it to the cart. The "Commissions" section will have a form to allow users to reach out to Kirsten about a custom work. There will also be a "Contact Me" section with contact and social media information about the Kirsten. 
 Users will be authenticated using JWT. Authenticated users will be able to see their purchase history and make new purchases using the Stripe payment platform. 
 
 
 ## Stretch Goals
 
 - Incorporate embedded social media component to show instagram posts on the page. 
-- Highlight "featured artisits" with links to outside stores and artists. 
+- Highlight "featured artists" with links to outside stores and artists. 
