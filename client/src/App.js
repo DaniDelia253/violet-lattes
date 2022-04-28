@@ -5,6 +5,7 @@ import NoMatch from './pages/NoMatch';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Nav from './components/Nav';
+import Cart from './components/Cart';
 import Commissions from './pages/Commissions';
 import AboutTheArtist from './pages/AboutTheArtist';
 
@@ -15,6 +16,7 @@ function App() {
   return (
     <Router>
       <Nav />
+      <Cart />
 
       <div>
         <Switch>

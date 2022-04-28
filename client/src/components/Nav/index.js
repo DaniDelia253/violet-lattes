@@ -30,6 +30,9 @@ function Nav() {
                             about the artist
                         </div>
                     </NavLink>
+                    <div className='navBtn' type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        <span id='cartIcon'>🛒</span>
+                    </div>
                 </nav>
             </header>
 
