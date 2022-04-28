@@ -141,6 +141,9 @@ header .navLink {
   flex-direction: column;
   justify-content: center;
 }
+.offcanvas {
+  background-color: var(--nav-color);
+}
 
 /* .cart {
   position: fixed;
