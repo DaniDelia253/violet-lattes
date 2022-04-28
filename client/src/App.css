@@ -67,7 +67,49 @@ header .navLink {
   font-size: 30px;
 }
 
+#aboutContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#aboutTextContainer {
+  margin: 20px 45px;
+}
+
+#aboutTextContainer p {
+  font-size: 20px;
+}
+
+#aboutTextLine {
+  display: flex;
+  align-items: center;
+}
+
 .aboutImg {
-  max-height: 550px;
+  max-height: 500px;
   margin-left: 40px;
+}
+
+.aboutIcon {
+  font-size: 30px;
+  padding: 10px;
+}
+
+#instaLink {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.card {
+  width: 18rem;
+  margin: 20px;
+}
+
+/* #productListContainer {
+  display: flex;
+  flex-wrap: wrap;
+} */
+
+.productImg {
+  max-height: 300px;
 }
