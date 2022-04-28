@@ -1,7 +1,115 @@
-.App {
+/* .App {
   text-align: center;
+} */
+
+* {
+  --bg-color: #fbd0b3;
+  --main-font: "Libre Baskerville", serif;
+  --nav-color: #ffe4d1;
+  --light-accent-color: #fff4eb;
+  --text-color: #763326;
+}
+
+body {
+  font-family: var(--main-font);
+  background-color: #fbd0b3;
+  color: #763326;
+}
+
+header {
+  background-color: #ffe4d1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 10px;
+  margin-left: 22px;
+  padding: 10px;
+  font-size: 50px;
+}
+
+header nav {
+  display: flex;
+  margin-right: 20px;
+}
+
+.navBtn {
+  background-color: var(--light-accent-color);
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+
+.navBtn:hover {
+  box-shadow: 3px 3px 8px var(--text-color);
+}
+
+header .navLink {
+  margin: 15px;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+#underNav {
+  background-color: var(--light-accent-color);
+  height: 15px;
 }
 
 #jumbotron img {
   max-height: 400px;
+}
+
+.pageTitle {
+  margin: 10px;
+  margin-left: 37px;
+  padding: 10px;
+  font-size: 30px;
+}
+
+#aboutContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#aboutTextContainer {
+  margin: 20px 45px;
+}
+
+#aboutTextContainer p {
+  font-size: 20px;
+}
+
+#aboutTextLine {
+  display: flex;
+  align-items: center;
+}
+
+.aboutImg {
+  max-height: 500px;
+  margin-left: 40px;
+}
+
+.aboutIcon {
+  font-size: 30px;
+  padding: 10px;
+}
+
+#instaLink {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.card {
+  width: 18rem;
+  margin: 20px;
+}
+
+/* #productListContainer {
+  display: flex;
+  flex-wrap: wrap;
+} */
+
+.productImg {
+  max-height: 300px;
 }

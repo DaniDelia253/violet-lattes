@@ -5,6 +5,8 @@ import NoMatch from './pages/NoMatch';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Nav from './components/Nav';
+import Commissions from './pages/Commissions';
+import AboutTheArtist from './pages/AboutTheArtist';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -12,11 +14,13 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 function App() {
   return (
     <Router>
+      <Nav />
 
       <div>
-        <Nav />
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/commissions" component={Commissions} />
+          <Route exact path="/about" component={AboutTheArtist} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
           {/* <Route exact path="/orderHistory" component={OrderHistory} /> */}

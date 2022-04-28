@@ -1,31 +1,13 @@
 import React from "react";
+import ProductList from "../../components/ProductList";
 
 function Home() {
 
 
     return (
         <div>
-
-            <div>
-                this is where the pics will be! :)
-            </div>
-            <div>
-                this is where the pics will be! :)
-            </div>
-            <div>
-                this is where the pics will be! :)
-            </div>
-            <div>
-                this is where the pics will be! :)
-            </div>
-            <div>
-                this is where the pics will be! :)
-            </div>
-            <div>
-                this is where the pics will be! :)
-            </div>
+            <ProductList />
         </div>
-
     );
 }
 
