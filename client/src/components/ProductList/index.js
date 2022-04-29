@@ -47,12 +47,15 @@ function ProductList() {
     ]
 
     return (
-        <div className="">
+        <div>
+
             <h2 className='pageTitle'>my work:</h2>
-            <div id='productListContainer'>
-                {products.map((product) => (
-                    <ProductItem key={product.name} product={product} />
-                ))}
+            <div className="productPage">
+                <div id='productListContainer'>
+                    {products.map((product) => (
+                        <ProductItem key={product.name} product={product} />
+                    ))}
+                </div>
             </div>
 
 

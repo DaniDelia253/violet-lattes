@@ -81,6 +81,11 @@ header .navLink {
   margin: 20px 45px;
 }
 
+#aboutTextContainer h2 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
 #aboutTextContainer p {
   font-size: 20px;
 }
@@ -116,7 +121,13 @@ header .navLink {
   background-color: var(--light-accent-color);
 }
 
+.productPage {
+  display: flex;
+  justify-content: center;
+}
+
 #productListContainer {
+  width: 89%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
