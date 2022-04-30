@@ -1,50 +1,56 @@
 // import React, { useEffect } from 'react';
 import ProductItem from '../ProductItem';
+import { useQuery } from '@apollo/client';
+import { QUERY_ALL_PRODUCTS } from '../../utils/queries'
 
 function ProductList() {
 
 
-    const products = [
-        {
-            name: 'hidden bouquet',
-            image: 'img1.png',
-            price: 5.00
-        },
-        {
-            name: 'holly jolly fall',
-            image: 'img2.png',
-            price: 5.00
-        }, {
-            name: 'summertime sweater',
-            image: 'img3.png',
-            price: 5.00
-        }, {
-            name: 'inked portrait',
-            image: 'img4.png',
-            price: 5.00
-        }, {
-            name: 'spacecatmagdalina',
-            image: 'img5.png',
-            price: 5.00
-        }, {
-            name: 'girls who lift',
-            image: 'img6.png',
-            price: 5.00
-        }, {
-            name: 'bubble tea bops ',
-            image: 'img7.png',
-            price: 5.00
-        }, {
-            name: 'be my valentine ',
-            image: 'img8.png',
-            price: 5.00
-        }, {
-            name: 'fizzy grape soda ',
-            image: 'img9.png',
-            price: 5.00
-        },
+    // const products = [
+    //     {
+    //         name: 'hidden bouquet',
+    //         image: 'img1.png',
+    //         price: 5.00
+    //     },
+    //     {
+    //         name: 'holly jolly fall',
+    //         image: 'img2.png',
+    //         price: 5.00
+    //     }, {
+    //         name: 'summertime sweater',
+    //         image: 'img3.png',
+    //         price: 5.00
+    //     }, {
+    //         name: 'inked portrait',
+    //         image: 'img4.png',
+    //         price: 5.00
+    //     }, {
+    //         name: 'spacecatmagdalina',
+    //         image: 'img5.png',
+    //         price: 5.00
+    //     }, {
+    //         name: 'girls who lift',
+    //         image: 'img6.png',
+    //         price: 5.00
+    //     }, {
+    //         name: 'bubble tea bops ',
+    //         image: 'img7.png',
+    //         price: 5.00
+    //     }, {
+    //         name: 'be my valentine ',
+    //         image: 'img8.png',
+    //         price: 5.00
+    //     }, {
+    //         name: 'fizzy grape soda ',
+    //         image: 'img9.png',
+    //         price: 5.00
+    //     },
 
-    ]
+    // ]
+
+    const { loading, data } = useQuery(QUERY_ALL_PRODUCTS)
+    const products = data?.products || [];
+    console.log(products);
 
     return (
         <div>

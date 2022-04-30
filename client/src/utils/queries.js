@@ -8,9 +8,8 @@ export const QUERY_ALL_PRODUCTS = gql`
       description
       price
       quantity
-      category {
-        name
-      }
+      image
+      image_link
     }
   }
 `;
@@ -30,6 +29,7 @@ export const QUERY_USER = gql`
           price
           quantity
           image
+          image_link
         }
       }
     }

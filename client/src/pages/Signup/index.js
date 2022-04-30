@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
 
 function Signup() {
     const [formState, setFormState] = useState({ email: '', password: '', firstName: '', lastName: '' });
@@ -19,7 +20,7 @@ function Signup() {
 
     return (
         <div className="container my-1">
-            {/* <Link to="/login">← Go to Login</Link> */}
+            <Link to="/login">Go to Login</Link>
 
             <h2>Signup</h2>
             <form onSubmit={handleFormSubmit}>
