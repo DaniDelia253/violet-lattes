@@ -14,6 +14,20 @@ export const QUERY_ALL_PRODUCTS = gql`
   }
 `;
 
+export const QUERY_PRODUCT = gql`
+  query PRODUCT($id: ID!) {
+    product(_id: $id) {
+      _id
+      name
+      description
+      price
+      quantity
+      image
+      image_link
+    }
+  }
+`;
+
 export const QUERY_USER = gql`
   {
     user {

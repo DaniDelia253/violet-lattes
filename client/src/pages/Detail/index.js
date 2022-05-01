@@ -1,14 +1,22 @@
 import React from "react";
+import { useParams } from 'react-router-dom';
+import { useQuery } from '@apollo/client'
+import { QUERY_PRODUCT } from '../../utils/queries'
+
 
 function Detail() {
 
-    const product =
-    {
-        name: 'hidden bouquet',
-        image: 'img1.png',
-        price: 5.00
-    }
+    const { id: productId } = useParams();
 
+    const { loading, data } = useQuery(QUERY_PRODUCT, {
+        variables: { id: productId }
+    })
+
+    const product = data?.product || {}
+
+    if (loading) {
+        return <div>one sec...</div>
+    }
 
     return (
         <div className='detailContainer'>
@@ -18,7 +26,6 @@ function Detail() {
                 <h1 className="card-text">${product.price}</h1>
             </div>
 
-            {/* <a href="" className="btn btn-primary">Go somewhere</a> */}
         </div>
 
 

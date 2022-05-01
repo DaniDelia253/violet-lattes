@@ -3,9 +3,9 @@ const { User, Product, Order } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
-  Query: {    
+  Query: {
     products: async (parent, { name }) => {
-      const params = {};      
+      const params = {};
 
       if (name) {
         params.name = {
