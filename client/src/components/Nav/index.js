@@ -1,18 +1,23 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import UserInfo from "../UserInfo";
 
 
 function Nav() {
 
 
+
     return (
         <div>
             <header className="flex-row header">
-                <NavLink className='navLink' to='/'>
-                    <h1>
-                        violetlattes
-                    </h1>
-                </NavLink>
+                <div>
+                    <NavLink className='navLink' to='/'>
+                        <h1>
+                            violetlattes
+                        </h1>
+                    </NavLink>
+                    <UserInfo></UserInfo>
+                </div>
                 <nav>
                     <NavLink className='navLink' to='/'>
                         <div className='navBtn'>

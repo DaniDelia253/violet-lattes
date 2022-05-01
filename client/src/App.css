@@ -36,6 +36,12 @@ header nav {
   align-items: center;
 }
 
+#dropdownIcon img {
+  max-height: 30px;
+  filter: invert(26%) sepia(8%) saturate(5983%) hue-rotate(326deg)
+    brightness(85%) contrast(90%);
+}
+
 .navBtn {
   background-color: var(--light-accent-color);
   padding: 10px 20px;
