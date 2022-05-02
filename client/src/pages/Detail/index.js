@@ -4,6 +4,7 @@ import { useQuery } from '@apollo/client'
 import { QUERY_PRODUCT } from '../../utils/queries'
 import { ADD_TO_CART } from '../../utils/actions';
 import { useStoreContext } from '../../utils/GlobalState';
+import { idbPromise } from '../../utils/helpers'
 
 
 
@@ -33,27 +34,15 @@ function Detail() {
             setMessage("this is already in your cart!")
         } else {
             setMessage('Added to your cart!')
-            console.log(data.product)
+
             dispatch({
                 type: ADD_TO_CART,
                 product: { ...product, purchaseQuantity: 1 }
             });
-            console.log(state)
+            // if product isn't in the cart yet, add it to the current shopping cart in IndexedDB
+            idbPromise('cart', 'put', { ...product, purchaseQuantity: 1 });
         }
-
-        // dispatch({
-        //     type: ADD_TO_CART,
-        //     product: { ...props.product, purchaseQuantity: 1 }
-        // });
-    };
-
-
-    // const addToCart = () => {
-    //     dispatch({
-    //         type: ADD_TO_CART,
-    //         product: { ...product, purchaseQuantity: 1 }
-    //     });
-    // };
+    }
 
     return (
         <div className='detailContainer'>

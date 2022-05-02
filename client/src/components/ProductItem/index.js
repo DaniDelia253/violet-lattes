@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useStoreContext } from '../../utils/GlobalState';
 import { ADD_TO_CART } from '../../utils/actions';
+import { idbPromise } from "../../utils/helpers";
+
 
 function ProductItem(props) {
 
@@ -19,25 +21,22 @@ function ProductItem(props) {
 
     // const { cart } = state.cart
 
+
     const addToCart = () => {
         const itemInCart = state.cart.find((cartItem) => cartItem._id === props.product._id);
-
         if (itemInCart) {
             setMessage("this is already in your cart!")
         } else {
             setMessage('Added to your cart!')
+
             dispatch({
                 type: ADD_TO_CART,
                 product: { ...props.product, purchaseQuantity: 1 }
             });
-            console.log("!!!ADDED")
+            idbPromise('cart', 'put', { ...props.product, purchaseQuantity: 1 });
         }
+    }
 
-        // dispatch({
-        //     type: ADD_TO_CART,
-        //     product: { ...props.product, purchaseQuantity: 1 }
-        // });
-    };
     return (
 
         <div>
