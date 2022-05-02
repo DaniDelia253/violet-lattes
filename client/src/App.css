@@ -207,6 +207,29 @@ header .navLink {
   background-color: var(--nav-color);
 }
 
+.cartItem {
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.cartImg {
+  max-width: 90px;
+}
+
+.cartIconTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.trashIcon {
+  font-size: 25px;
+}
+
 /* .cart {
   position: fixed;
   top: 25;

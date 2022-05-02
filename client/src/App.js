@@ -9,6 +9,9 @@ import Cart from './components/Cart';
 import Commissions from './pages/Commissions';
 import AboutTheArtist from './pages/AboutTheArtist';
 
+import { StoreProvider } from "./utils/GlobalState";
+
+
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 
@@ -26,22 +29,24 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <Nav />
-        <Cart />
+        <StoreProvider>
+          <Nav />
+          <Cart />
 
-        <div>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/commissions" component={Commissions} />
-            <Route exact path="/about" component={AboutTheArtist} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/signup" component={Signup} />
-            {/* <Route exact path="/orderHistory" component={OrderHistory} /> */}
-            <Route exact path="/products/:id" component={Detail} />
-            <Route component={NoMatch} />
-          </Switch>
-          {/* FOOTER */}
-        </div>
+          <div>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/commissions" component={Commissions} />
+              <Route exact path="/about" component={AboutTheArtist} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/signup" component={Signup} />
+              {/* <Route exact path="/orderHistory" component={OrderHistory} /> */}
+              <Route exact path="/products/:id" component={Detail} />
+              <Route component={NoMatch} />
+            </Switch>
+            {/* FOOTER */}
+          </div>
+        </StoreProvider>
       </Router>
     </ApolloProvider>
 

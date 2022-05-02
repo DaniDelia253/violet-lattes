@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client'
 import { QUERY_PRODUCT } from '../../utils/queries'
+import { ADD_TO_CART } from '../../utils/actions';
+import { useStoreContext } from '../../utils/GlobalState';
+
+
 
 
 function Detail() {
+    const [state, dispatch] = useStoreContext();
+    const [message, setMessage] = useState("")
+
 
     const { id: productId } = useParams();
 
@@ -13,10 +20,40 @@ function Detail() {
     })
 
     const product = data?.product || {}
+    console.log(product)
 
     if (loading) {
         return <div>one sec...</div>
     }
+
+    const addToCart = () => {
+        const itemInCart = state.cart.find(cartItem => cartItem._id === product._id);
+
+        if (itemInCart) {
+            setMessage("this is already in your cart!")
+        } else {
+            setMessage('Added to your cart!')
+            console.log(data.product)
+            dispatch({
+                type: ADD_TO_CART,
+                product: { ...product, purchaseQuantity: 1 }
+            });
+            console.log(state)
+        }
+
+        // dispatch({
+        //     type: ADD_TO_CART,
+        //     product: { ...props.product, purchaseQuantity: 1 }
+        // });
+    };
+
+
+    // const addToCart = () => {
+    //     dispatch({
+    //         type: ADD_TO_CART,
+    //         product: { ...product, purchaseQuantity: 1 }
+    //     });
+    // };
 
     return (
         <div className='detailContainer'>
@@ -24,6 +61,10 @@ function Detail() {
             <div className='detailTextContainer'>
                 <h1 className="card-title">{product.name}</h1>
                 <h1 className="card-text">${product.price}</h1>
+                <button onClick={addToCart}>Add to Cart</button>
+                <p>{message}</p>
+
+
             </div>
 
         </div>
