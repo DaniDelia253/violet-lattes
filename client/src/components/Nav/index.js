@@ -10,13 +10,14 @@ function Nav() {
     return (
         <div>
             <header className="flex-row header">
-                <div>
+                <div id='brandContainer'>
                     <NavLink className='navLink' to='/'>
-                        <h1>
+                        <h1 id='brandText'>
                             violetlattes
                         </h1>
                     </NavLink>
-                    <UserInfo></UserInfo>
+                    <div className='userInfo'><UserInfo></UserInfo></div>
+
                 </div>
                 <nav>
                     <NavLink className='navLink' to='/'>

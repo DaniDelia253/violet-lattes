@@ -54,8 +54,41 @@ header nav {
 
 header .navLink {
   margin: 15px;
+  margin-bottom: 0;
+  padding-bottom: 0;
   text-decoration: none;
   color: var(--text-color);
+}
+
+.userInfo {
+  margin: 0 0 0 38px;
+}
+
+.userinfotext {
+  font-size: 18px;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.userinfotext:hover {
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+.userInfoLI {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.userInfoLIitem {
+  padding: 0 20px 10px 0;
+}
+
+#brandText {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 #cartIcon {
