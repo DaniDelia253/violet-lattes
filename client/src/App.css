@@ -36,6 +36,12 @@ header nav {
   align-items: center;
 }
 
+#dropdownIcon img {
+  max-height: 30px;
+  filter: invert(26%) sepia(8%) saturate(5983%) hue-rotate(326deg)
+    brightness(85%) contrast(90%);
+}
+
 .navBtn {
   background-color: var(--light-accent-color);
   padding: 10px 20px;
@@ -48,8 +54,41 @@ header nav {
 
 header .navLink {
   margin: 15px;
+  margin-bottom: 0;
+  padding-bottom: 0;
   text-decoration: none;
   color: var(--text-color);
+}
+
+.userInfo {
+  margin: 0 0 0 38px;
+}
+
+.userinfotext {
+  font-size: 18px;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.userinfotext:hover {
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+.userInfoLI {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.userInfoLIitem {
+  padding: 0 20px 10px 0;
+}
+
+#brandText {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 #cartIcon {
@@ -81,6 +120,11 @@ header .navLink {
   margin: 20px 45px;
 }
 
+#aboutTextContainer h2 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
 #aboutTextContainer p {
   font-size: 20px;
 }
@@ -105,6 +149,18 @@ header .navLink {
   color: var(--text-color);
 }
 
+.linkText {
+  font-family: var(--main-font);
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.linkText:hover {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
 .card {
   width: 18rem;
   margin: 40px;
@@ -116,7 +172,13 @@ header .navLink {
   background-color: var(--light-accent-color);
 }
 
+.productPage {
+  display: flex;
+  justify-content: center;
+}
+
 #productListContainer {
+  width: 89%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -143,6 +205,30 @@ header .navLink {
 }
 .offcanvas {
   background-color: var(--nav-color);
+}
+
+.cartItem {
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.cartImg {
+  max-width: 90px;
+}
+
+.cartIconTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.trashIcon {
+  font-size: 25px;
+  cursor: pointer;
 }
 
 /* .cart {

@@ -21,7 +21,7 @@ function Commissions() {
     return (
         <div className="container my-1">
 
-            <h2>Commissions</h2>
+            <h2>commissions</h2>
             <form onSubmit={handleFormSubmit}>
                 <div className="flex-row space-between my-2">
                     <label htmlFor="firstName">First Name:</label>
