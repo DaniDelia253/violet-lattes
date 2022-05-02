@@ -228,6 +228,7 @@ header .navLink {
 
 .trashIcon {
   font-size: 25px;
+  cursor: pointer;
 }
 
 /* .cart {
