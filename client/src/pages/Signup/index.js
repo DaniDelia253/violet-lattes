@@ -5,7 +5,7 @@ import { ADD_USER } from '../../utils/mutations';
 
 function Signup() {
     const [formState, setFormState] = useState({ email: '', password: '', firstName: '', lastName: '' });
-    const [addUser] = useMutation(ADD_USER);
+    const [addUser, { error }] = useMutation(ADD_USER);
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
@@ -19,8 +19,6 @@ function Signup() {
         });
         const token = mutationResponse.data.addUser.token;
         Auth.login(token);
-        alert('success!!!')
-        alert(token)
     };
 
     const handleChange = (event) => {
@@ -32,13 +30,14 @@ function Signup() {
     };
 
     return (
-        <div className="container my-1">
+        <div>
 
-            <h2>Signup</h2>
-            <form onSubmit={handleFormSubmit}>
+            <h2 className='pageTitle'>Signup</h2>
+            <form className='pageTitle' onSubmit={handleFormSubmit}>
                 <div className="flex-row space-between my-2">
-                    <label htmlFor="firstName">First Name:</label>
+                    <label className='formText mx-2' htmlFor="firstName">First Name:</label>
                     <input
+                        className='formText input'
                         placeholder="First"
                         name="firstName"
                         type="firstName"
@@ -47,8 +46,9 @@ function Signup() {
                     />
                 </div>
                 <div className="flex-row space-between my-2">
-                    <label htmlFor="lastName">Last Name:</label>
+                    <label className='formText mx-2' htmlFor="lastName">Last Name:</label>
                     <input
+                        className='formText input'
                         placeholder="Last"
                         name="lastName"
                         type="lastName"
@@ -57,8 +57,9 @@ function Signup() {
                     />
                 </div>
                 <div className="flex-row space-between my-2">
-                    <label htmlFor="email">Email:</label>
+                    <label className='formText mx-2' htmlFor="email">Email:</label>
                     <input
+                        className='formText input'
                         placeholder="youremail@test.com"
                         name="email"
                         type="email"
@@ -67,8 +68,9 @@ function Signup() {
                     />
                 </div>
                 <div className="flex-row space-between my-2">
-                    <label htmlFor="pwd">Password:</label>
+                    <label className='formText mx-2' htmlFor="pwd">Password:</label>
                     <input
+                        className='formText'
                         placeholder="******"
                         name="password"
                         type="password"
@@ -76,8 +78,14 @@ function Signup() {
                         onChange={handleChange}
                     />
                 </div>
+                {error ? (
+                    <div>
+                        <p className="error-text small-error-text">First name, last name, valid email address, and a password with more than 4 characters are required! </p>
+
+                    </div>
+                ) : null}
                 <div className="flex-row flex-end">
-                    <button type="submit">Submit</button>
+                    <button className='addToCartMainBtn formSubmitBtn' type="submit">Submit</button>
                 </div>
             </form>
         </div>

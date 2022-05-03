@@ -111,6 +111,10 @@ header .navLink {
   font-size: 30px;
 }
 
+.formText {
+  font-size: 18px;
+}
+
 #aboutContainer {
   display: flex;
   justify-content: space-evenly;
@@ -154,6 +158,7 @@ header .navLink {
   color: var(--text-color);
   text-decoration: none;
   font-size: 16px;
+  text-align: center;
 }
 
 .linkText:hover {
@@ -166,10 +171,17 @@ header .navLink {
   margin: 40px;
   border: 10px solid var(--light-accent-color);
   border-radius: 10px;
+  background-color: var(--light-accent-color);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-body {
   background-color: var(--light-accent-color);
+  padding-bottom: 0;
 }
 
 .productPage {
@@ -188,6 +200,89 @@ header .navLink {
   max-height: 300px;
 }
 
+.productMessage {
+  background-color: var(--light-accent-color);
+  margin: 0;
+  padding-top: 8px;
+  text-align: center;
+}
+
+.addToCartMainBtn {
+  background-color: var(--light-accent-color);
+  padding: 5px;
+  border-radius: 10px;
+  border-width: thin;
+  border-color: var(--text-color);
+  margin: 0;
+  margin-top: 5px;
+  color: var(--text-color);
+  width: 60%;
+  text-decoration: none;
+}
+
+.addToCartMainBtn:hover {
+  color: var(--text-color);
+}
+
+.formSubmitBtn {
+  padding: 5px;
+  width: 10%;
+  font-size: 15px;
+}
+
+.error-text {
+  font-size: 18px;
+  margin: 20px;
+}
+
+.small-error-text {
+  font-size: 14px;
+}
+
+.checkoutBtn {
+  justify-self: center;
+  align-self: center;
+}
+
+.checkoutTotalContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.checkoutTotalContainer strong {
+  margin: 20px;
+}
+
+input {
+  border-width: 0 !important;
+}
+
+.addToCartDetailBtn {
+  background-color: var(--light-accent-color);
+  padding: 5px;
+  border-radius: 12px;
+  border-width: thin;
+  border-color: var(--text-color);
+  margin: 0;
+  margin-top: 5px;
+  color: var(--text-color);
+  width: 60%;
+}
+
+.detail-text {
+  text-align: center;
+  margin: 10px;
+}
+
+.detailProductMessage {
+  margin: 0;
+  padding-top: 8px;
+  text-align: center;
+}
+
 .detailContainer {
   display: flex;
   justify-content: space-evenly;
@@ -202,9 +297,17 @@ header .navLink {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 .offcanvas {
   background-color: var(--nav-color);
+}
+
+.cartContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .cartItem {
@@ -229,6 +332,13 @@ header .navLink {
 .trashIcon {
   font-size: 25px;
   cursor: pointer;
+}
+
+.cartErrImg {
+  max-height: 300px;
+  align-self: center;
+  justify-self: center;
+  margin: 20px;
 }
 
 /* .cart {
