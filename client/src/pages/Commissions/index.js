@@ -6,7 +6,16 @@ function Commissions() {
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
-        alert(`submit: ${formState.email} & ${formState.password} & ${formState.firstName} ${formState.lastName}`)
+        alert(`Thank you for sending your message! I will get back you you within 1 business day about your commission! Please check the following information to ensure it is correct: 
+        
+        name: 
+        ${formState.name} 
+        
+        email:
+        ${formState.email} 
+        
+        message:
+        ${formState.text}`)
 
     };
 
@@ -22,15 +31,15 @@ function Commissions() {
         <div className="container my-1">
 
             <h2 className='pageTitle'>commissions</h2>
-            <form onSubmit={handleFormSubmit}>
+            <form onSubmit={handleFormSubmit} action="mailto:danidavis321@gmail.com">
                 <div className="flex-row space-between my-3">
-                    <label className='formText mx-2' htmlFor="firstName">First Name:</label>
+                    <label className='formText mx-2' htmlFor="name">Name:</label>
                     <input
                         className='formText input'
                         placeholder="name"
-                        name="firstName"
-                        type="firstName"
-                        id="firstName"
+                        name="name"
+                        type="name"
+                        id="name"
                         onChange={handleChange}
                     />
                 </div>
