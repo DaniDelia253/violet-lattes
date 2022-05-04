@@ -29,7 +29,10 @@ const typeDefs = gql`
     token: ID
     user: User
   }
-
+  
+  type Checkout {
+    session: ID
+  }
   type Query {    
     products(name: String): [Product]
     product(_id: ID!): Product
@@ -46,9 +49,6 @@ const typeDefs = gql`
     updateProduct(_id: ID!, quantity: Int!): Product    
   }
 
-  type Checkout {
-    session: ID
-  }
   
 `;
 
