@@ -31,7 +31,7 @@ function Detail() {
         const itemInCart = state.cart.find(cartItem => cartItem._id === product._id);
 
         if (itemInCart) {
-            setMessage("this is already in your cart!")
+            setMessage("This is already in your cart!")
         } else {
             setMessage('Added to your cart!')
 
@@ -48,10 +48,10 @@ function Detail() {
         <div className='detailContainer'>
             <img className='detailImg' src={`/images/previews/${product.image}`} alt={product.name} />
             <div className='detailTextContainer'>
-                <h1 className="card-title">{product.name}</h1>
-                <h1 className="card-text">${product.price}</h1>
-                <button onClick={addToCart}>Add to Cart</button>
-                <p>{message}</p>
+                <h1 className="card-title detail-text">{product.name}</h1>
+                <h1 className="card-text detail-text">${product.price}</h1>
+                <button className='addToCartDetailBtn' onClick={addToCart}>Add to Cart</button>
+                <p className='detailProductMessage'>{message}</p>
 
 
             </div>

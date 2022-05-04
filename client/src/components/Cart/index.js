@@ -4,6 +4,7 @@ import Auth from '../../utils/auth'
 import { useStoreContext } from '../../utils/GlobalState';
 import { ADD_MULTIPLE_TO_CART } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
+import { Link } from "react-router-dom";
 
 
 
@@ -39,31 +40,38 @@ const Cart = () => {
             </div>
             <div className="offcanvas-body">
                 {state.cart.length ? (
-                    <div>
+                    <div className=''>
                         {state.cart.map(item => (
                             <CartItem key={item._id} item={item} />
                         ))}
-                        <div className="flex-row space-between">
+                        <div className=" checkoutTotalContainer">
                             <strong>Total: ${calculateTotal()}</strong>
 
                             {
                                 Auth.loggedIn() ?
-                                    <button>
+                                    <button className='addToCartMainBtn checkoutBtn' >
                                         Checkout
                                     </button>
                                     :
-                                    <span>(log in to check out)</span>
+                                    <span>
+                                        <Link className='addToCartMainBtn checkoutBtn' to="/login">
+                                            Log in to checkout!
+                                        </Link>
+                                    </span>
                             }
                         </div>
 
                     </div>
                 ) : (
-                    <h3>
-                        <span role="img" aria-label="shocked">
-                            😱
-                        </span>
-                        You haven't added anything to your cart yet!
-                    </h3>
+                    <div className='cartContainer'>
+                        <h6>
+                            You haven't added anything to your cart yet!
+                        </h6>
+                        <img className='cartErrImg' alt='error- add items!' src='/images/err/404err.jpeg'></img>
+                        <h6>
+                            Add some stuff and then come back!
+                        </h6>
+                    </div>
                 )}
             </div>
         </div>

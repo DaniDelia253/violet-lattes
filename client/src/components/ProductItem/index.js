@@ -25,7 +25,7 @@ function ProductItem(props) {
     const addToCart = () => {
         const itemInCart = state.cart.find((cartItem) => cartItem._id === props.product._id);
         if (itemInCart) {
-            setMessage("this is already in your cart!")
+            setMessage("This is already in your cart!")
         } else {
             setMessage('Added to your cart!')
 
@@ -51,8 +51,8 @@ function ProductItem(props) {
                         <p className="card-text linkText">${props.product.price}</p>
                     </div>
                 </Link>
-                <button onClick={addToCart}>Add to cart</button>
-                <p>{message}</p>
+                <button className='addToCartMainBtn' onClick={addToCart}>Add to cart</button>
+                <p className='productMessage'>{message}</p>
             </div>
         </div>
     )
