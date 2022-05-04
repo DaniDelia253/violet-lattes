@@ -21,50 +21,46 @@ function Commissions() {
     return (
         <div className="container my-1">
 
-            <h2>commissions</h2>
+            <h2 className='pageTitle'>commissions</h2>
             <form onSubmit={handleFormSubmit}>
-                <div className="flex-row space-between my-2">
-                    <label htmlFor="firstName">First Name:</label>
+                <div className="flex-row space-between my-3">
+                    <label className='formText mx-2' htmlFor="firstName">First Name:</label>
                     <input
-                        placeholder="First"
+                        className='formText input'
+                        placeholder="name"
                         name="firstName"
                         type="firstName"
                         id="firstName"
                         onChange={handleChange}
                     />
                 </div>
-                <div className="flex-row space-between my-2">
-                    <label htmlFor="lastName">Last Name:</label>
+                <div className="flex-row space-between my-3">
+                    <label className='formText mx-2' htmlFor="email">Email:</label>
                     <input
-                        placeholder="Last"
-                        name="lastName"
-                        type="lastName"
-                        id="lastName"
-                        onChange={handleChange}
-                    />
-                </div>
-                <div className="flex-row space-between my-2">
-                    <label htmlFor="email">Email:</label>
-                    <input
-                        placeholder="youremail@test.com"
+                        className='formText input'
+                        placeholder="email"
                         name="email"
                         type="email"
                         id="email"
                         onChange={handleChange}
                     />
                 </div>
-                <div className="flex-row space-between my-2">
-                    <label htmlFor="pwd">Password:</label>
-                    <input
-                        placeholder="******"
-                        name="password"
-                        type="password"
-                        id="pwd"
+                <div className="flex-row space-between my-3">
+                    <label className='formText mx-2' htmlFor="lastName"></label>
+                    <textarea
+                        className='formText input'
+                        placeholder="What would you like to request for a commission? Give me an idea and I will be in contact about the details!"
+                        name="text"
+                        type="text"
+                        id="text"
+                        rows="5"
+                        cols='30'
                         onChange={handleChange}
                     />
                 </div>
+
                 <div className="flex-row flex-end">
-                    <button type="submit">Submit</button>
+                    <button className='addToCartMainBtn formSubmitBtn' type="submit">Submit</button>
                 </div>
             </form>
         </div>

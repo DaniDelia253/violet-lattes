@@ -63,7 +63,7 @@ function Login() {
                     </div>
                 ) : null}
                 <div className="flex-row flex-end">
-                    <button className='addToCartMainBtn formSubmitBtn' ttype="submit">Submit</button>
+                    <button className='addToCartMainBtn formSubmitBtn' type="submit">Submit</button>
                 </div>
             </form>
         </div>
