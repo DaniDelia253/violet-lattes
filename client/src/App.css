@@ -71,7 +71,6 @@ header .navLink {
 }
 
 .userinfotext:hover {
-  font-size: 18px;
   color: var(--text-color);
 }
 
@@ -404,3 +403,66 @@ input {
   padding: 0;
   margin: 0 0.5rem 1rem 0;
 } */
+
+@media screen and (max-width: 980px) {
+  .header {
+    background-color: #ffe4d1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  header h1 {
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+  }
+
+  header nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .userinfotext {
+    font-size: 15px;
+    color: var(--text-color);
+    text-decoration: none;
+  }
+  #brandContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .dropdown {
+    margin-top: 8px;
+    padding-right: 22px;
+  }
+  .userinfotext {
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #dropdownIcon {
+    margin-left: 8px;
+  }
+  .navBtn {
+    background-color: var(--light-accent-color);
+    padding: 8px 12px;
+    border-radius: 30px;
+    font-size: 12px;
+  }
+  #cartIcon {
+    font-size: 15px;
+  }
+  header .navLink {
+    margin: 10px;
+    padding-bottom: 0;
+    text-decoration: none;
+    color: var(--text-color);
+  }
+}
