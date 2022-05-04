@@ -4,6 +4,8 @@ import Detail from './pages/Detail';
 import NoMatch from './pages/NoMatch';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import Success from './pages/Success'
+import OrderHistory from './pages/OrderHistory';
 import Nav from './components/Nav';
 import Cart from './components/Cart';
 import Commissions from './pages/Commissions';
@@ -40,7 +42,8 @@ function App() {
               <Route exact path="/about" component={AboutTheArtist} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
-              {/* <Route exact path="/orderHistory" component={OrderHistory} /> */}
+              <Route path="/success" component={Success} />
+              <Route exact path="/orderHistory" component={OrderHistory} />
               <Route exact path="/products/:id" component={Detail} />
               <Route component={NoMatch} />
             </Switch>

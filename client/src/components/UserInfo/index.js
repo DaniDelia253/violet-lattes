@@ -22,11 +22,11 @@ function UserInfo() {
                         </span>
                     </p>
                     <ul className="flex-row dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li className="userinfotext dropdown-item">
+                        {/* <li className="userinfotext dropdown-item">
                             <Link className='userinfotext' to="/orderHistory">
                                 Order History
                             </Link>
-                        </li>
+                        </li> */}
                         <li className="userinfotext dropdown-item">
                             {/* this is not using the Link component to logout or user and then refresh the application to the start */}
                             <a className='userinfotext' href="/" onClick={() => Auth.logout()}>
