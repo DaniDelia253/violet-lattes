@@ -1,7 +1,7 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { User, Product, Order } = require('../models');
 const { signToken } = require('../utils/auth');
-const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
+const stripe = require('stripe')('pk_test_51KvTr7HUATdUTaum0Toi2GWGUb5CkYgYZaeVRWh7x6K23Y9HmZex6szvf40tVuuGBwG1nqHt9pwsPCoVXUl0ovly00WS1Fqphn');
 
 
 const resolvers = {
@@ -33,6 +33,7 @@ const resolvers = {
 
       throw new AuthenticationError('Not logged in');
     },
+
     order: async (parent, { _id }, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({

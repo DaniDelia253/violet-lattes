@@ -10,6 +10,7 @@
     "build": "cd client && npm run build"
   },
   "dependencies": {
-    "stripe": "^8.219.0"
+    "dotenv": "^16.0.0",
+    "stripe": "^8.220.0"
   }
 }
