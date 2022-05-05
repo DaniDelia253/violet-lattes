@@ -24,7 +24,13 @@ The site will have a login feature that authenticates users using JWT. Authentic
 
 ## Animated Gifs/Pictures of App
 
-- Screenshots coming soon!
+![vl1](https://user-images.githubusercontent.com/40706088/166853959-580c8e79-9f1c-4ff0-9d56-b9b1d1d1adfa.jpg)
+
+![image](https://user-images.githubusercontent.com/40706088/166853988-b7382bef-8c72-4eb3-a2a2-b49170497b17.png)
+
+![image](https://user-images.githubusercontent.com/40706088/166854077-a9a7d885-f8e2-499b-8857-62a8dd3c53dd.png)
+
+
 
 
 
