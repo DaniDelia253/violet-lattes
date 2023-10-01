@@ -14,14 +14,6 @@ The site will have a login feature that authenticates users using JWT. Authentic
 2. Danielle James
 
 
-
-## Installation Instructions
-
-- [The application Repo can be accessed here](https://github.com/DaniDelia253/violet-lattes)
-
-
-
-
 ## Animated Gifs/Pictures of App
 
 ![vl1](https://user-images.githubusercontent.com/40706088/166853959-580c8e79-9f1c-4ff0-9d56-b9b1d1d1adfa.jpg)
